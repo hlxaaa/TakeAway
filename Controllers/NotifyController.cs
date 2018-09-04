@@ -23,9 +23,9 @@ namespace takeAwayWebApi.Controllers
         }
 
         #region 支付宝支付异步通知
-        string sellerId = "2088821922720702";
-        string appId = "2017120100290167";
-        string alipayPublicKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArUAknZtt2dDC6PdS03VMVG2j9bkagJMbel5pJS7lKWXOjfbsM1Donk5Oj7pkORxuF0sXjRaKouCqNEikbPLreMeASaisOvVK+iaU4yaCtGQw8poceOYO+PzC43O1HryOf4MkckyfbM4QJ1QsNkLh3Wc3BJF3dZDE1sPWrOEzbNWgLdU14BiBZVbmwulmU+EGvjBTh4ST+bVnnrayrNyAUqEEgtVvcSOwurmpCf2DXnqMaA/tasFCUwqEEfCuyXzk+zGuoAPj6gLfKs783Jy1slmOiFJhUWza8ejdtsaWeWy32N9MF6XkvbZmrFSZVT7gOrTZ1W1BNbz3Thw+R0043QIDAQAB";
+        string sellerId = "1";
+        string appId = "1";
+        string alipayPublicKey = "1";
 
         /// <summary>
         /// 支付宝支付订单异步通知
