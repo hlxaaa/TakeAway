@@ -1,0 +1,111 @@
+﻿@{
+    ViewBag.Title = "菜品管理";
+}
+@Scripts.Render("~/Scripts/webs/food.js?201803121555")
+@Styles.Render("~/Content/webs/food.css?201803121555")
+<div>
+    <div id="div-search" class="fl">
+        <div class="input-group">
+            <input type="text" class="form-control">
+            <span class="input-group-btn">
+                <button class="btn btn-primary btnSearch" type="button">
+                    搜索
+                </button>
+            </span>
+        </div>
+    </div>
+    <div class="div-right3 fr">
+        <button class="btn-addWeek btn btn-primary">添加周菜品</button>
+    </div>
+    <div class="div-right1 fr">
+        <button class="btn-add btn btn-primary">添加实时菜品</button>
+    </div>
+    <div class="div-right2 fr">
+        <button class="btn-batchDel btn btn-primary">批量删除</button>
+    </div>
+    <div class="fc"></div>
+</div>
+<div id="selector">
+     <div id="selector-left" class="fl">
+         <div><font class="fr">周/实时菜品:</font></div>
+            <div class="sl-div"><font class="fr">主配菜:</font></div>
+            <div class="sl-div"><font class="fr">是否可回收:</font></div>
+            <div class="sl-div t-isOn"><font class="fr">周菜品是否上架:</font></div>
+         <div class="fc"></div>
+         </div>
+
+    <div id="selector-right" class="fl">
+        <div class="s-week">
+            <font></font>
+            <span id="span-all2" class="label label-info">全部<input type="hidden" value="2" /></span>
+            <span id="span-week" class="label label-default">周菜品<input type="hidden" value="1" /></span>
+            <span id="span-notWeek" class="label label-default">实时<input type="hidden" value="0" /></span>
+        </div>
+
+        <div class="s-main">
+            <font></font>
+            <span id="span-all" class="label label-info">全部<input type="hidden" value="2" /></span>
+            <span id="span-main" class="label label-default">主菜<input type="hidden" value="1" /></span>
+            <span id="span-notMain" class="label label-default">配菜<input type="hidden" value="0" /></span>
+        </div>
+        <div class="s-deposit">
+            <font></font>
+            <span id="span-all4" class="label label-info">全部<input type="hidden" value="2" /></span>
+            <span id="span-deposit" class="label label-default">可<input type="hidden" value="1" /></span>
+            <span id="span-noDeposit" class="label label-default">不可<input type="hidden" value="0" /></span>
+        </div>
+        <div class="s-isOn t-isOn">
+            <font></font>
+            <span id="span-all3" class="label label-info">全部<input type="hidden" value="2" /></span>
+            <span id="span-notOn" class="label label-default">上架<input type="hidden" value="1" /></span>
+            <span id="span-on" class="label label-default">下架<input type="hidden" value="0" /></span>
+        </div>
+    </div>
+    <div class="fc"></div>
+    <div class="input-group" id="weekTag">
+        <span class="input-group-addon">周标签</span>
+        <select class="form-control" id="select-tag">
+            <option value="0">全部</option>
+            @{var dict = new Dictionary<int, string>();
+              dict = ViewBag.dict;
+              foreach (var item in dict)
+              {
+                <option value="@item.Key">@item.Value</option>
+              }
+            }
+        </select>
+    </div>
+
+</div>
+<div id="content-white">
+    <div id="table-wapper">
+        <table id="main-table">
+            <thead>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>黄焖鸡
+                    </td>
+                    <td>100
+                    </td>
+                    <td>西餐
+                    </td>
+                    <td>图片啊
+                    </td>
+                    <td>真的内容
+                    </td>
+                    <td>
+                        <input class="foodId" type="hidden" value="">
+                        <button class="btn-edit btn btn-primary">编辑</button>
+                        <button class="btn-del btn btn-primary">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

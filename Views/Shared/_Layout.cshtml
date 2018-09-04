@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="renderer" content="webkit" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Scripts.Render("~/Scripts/jquery-2.0.0.min.js")
+    <link href="~/Content/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Content/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/layer/layer.js"></script>
+    <script src="~/Scripts/webs/ajax.js"></script>
+
+    @Styles.Render("~/Content/webs/_Layout.css?201803121555")
+    @Scripts.Render("~/Scripts/webs/_Layout.js?201803121555")
+</head>
+<body>
+    <div id="header">
+        <div class="white header-left fl">饭的管理系统</div>
+        <div class="fr">
+            <img src="/img/icon/icon-exit.svg" alt="Alternate Text" class="icon-exit" /></div>
+        <div class="fc"></div>
+    </div>
+    <div class="main-wrapper">
+        <div id="sider" class="fl">
+            <ul class="menu">
+                <li id="li-foodtag">
+                    <div class="fl">
+                        <img src="~/Img/icon/foodtag.svg" /><a href="~/foodtag">标签管理</a>
+                    </div>
+                    <div class="li-div-active fr"></div>
+                    <div class="fc"></div>
+                </li>
+                <li id="li-food">
+                    <div class="fl">
+                        <img src="~/Img/icon/food.svg" /><a href="~/food">菜品管理</a>
+                    </div>
+                    <div class="li-div-active fr"></div>
+                    <div class="fc"></div>
+                </li>
+                <li id="li-user">
+                    <div class="fl">
+                        <img src="~/Img/icon/user.svg" /><a href="~/user">用户管理</a>
+                    </div>
+                    <div class="li-div-active fr"></div>
+                    <div class="fc"></div>
+                </li>
+                <li id="li-article">
+                    <div class="fl">
+                        <img src="~/Img/icon/article.svg" /><a href="~/article">文章公告</a>
+                    </div>
+                    <div class="li-div-active fr"></div>
+                    <div class="fc"></div>
+                </li>
+                <li id="li-order">
+                    <div class="fl">
+                        <img src="~/Img/icon/order.svg" /><a href="~/order">订单管理</a>
+                    </div>
+                    <div class="li-div-active fr"></div>
+                    <div class="fc"></div>
+                </li>
+                <li id="li-rider">
+                    <div class="fl">
+                        <img src="~/Img/icon/rider.svg" /><a href="~/rider">骑手管理</a>
+                    </div>
+                    <div class="li-div-active fr"></div>
+                    <div class="fc"></div>
+                </li>
+                <li id="li-area">
+                    <div class="fl">
+                        <img src="~/Img/icon/area.svg" /><a href="~/area">区域管理</a>
+                    </div>
+                    <div class="li-div-active fr"></div>
+                    <div class="fc"></div>
+                </li>
+                <li id="li-takeCash">
+                    <div class="fl">
+                        <img src="~/Img/icon/takecash.svg" /><a href="~/takecash">提现确认</a>
+                    </div>
+                    <div class="li-div-active fr"></div>
+                    <div class="fc"></div>
+                </li>
+                <li id="li-coupon">
+                    <div class="fl">
+                        <img src="~/Img/icon/coupon.svg" /><a href="~/coupon">优惠码管理</a>
+                    </div>
+                    <div class="li-div-active fr"></div>
+                    <div class="fc"></div>
+                </li>
+                    <li id="li-settings">
+                    <div class="fl">
+                        <img src="~/Img/icon/system.svg" /><a href="~/settings">系统设置</a>
+                    </div>
+                    <div class="li-div-active fr"></div>
+                    <div class="fc"></div>
+                </li>
+            </ul>
+        </div>
+        <div id="content" class="fl">
+            @RenderBody()
+        </div>
+        <div class="fc"></div>
+    </div>
+    @RenderSection("scripts", required: false)
+
+</body>
+@Scripts.Render("~/Scripts/webs/jquery-form.js")
+
+<link href="~/Scripts/checkboxStyle/skins/minimal/minimal.css" rel="stylesheet" />
+<script src="~/Scripts/checkboxStyle/icheck.min.js"></script>
+<script src="~/Scripts/webs/last.js"></script>
+</html>

@@ -1,0 +1,133 @@
+﻿@{
+    ViewBag.Title = "用户管理";
+}
+
+@Scripts.Render("~/Scripts/webs/user.js?201803121555")
+@Styles.Render("~/Content/webs/user.css?201803121555")
+<div id="div-search" class="fl">
+    <div class="input-group">
+        <input type="text" class="form-control">
+        <span class="input-group-btn">
+            <button class="btn btn-primary btnSearch" type="button">
+                搜索
+            </button>
+        </span>
+    </div>
+</div>
+<div class="div-right1 fr">
+    <button class="btn-add btn btn-primary">添加</button>
+</div>
+<div class="div-right2 fr">
+    <button class="btn-batchDel btn btn-primary">批量删除</button>
+</div>
+<div class="fc"></div>
+
+<div id="selector">
+      <div class="s-pageType">
+       <span id="span-userInfo" class="label label-info">用户信息<input type="hidden" value ="0"/></span>
+       <span id="span-userUseInfo" class="label label-default">用户APP使用信息<input type="hidden" value ="1"/></span>
+           <span id="span-userSuggestion" class="label label-default">用户建议<input type="hidden" value ="2"/></span>
+    </div>
+        <div class="input-group" id="timeArea">
+             <span class="input-group-addon">时间区间</span>
+            <input type="text" class="form-control time1" name="name" value="2018-01-01 00:01:00" />
+            <span class="input-group-addon">—</span>
+               <input type="text" class="form-control time2" name="name" value="@DateTime.Now.AddDays(1).ToString("yyyy-MM-dd HH:mm:ss")" />
+        </div>
+
+</div>
+
+
+<div id="content-white">
+    <div id="table-wapper">
+        <table id="main-table">
+            <thead>
+                <tr>
+                    <th width="2%">
+                        <input type="checkbox"></th>
+                    <th width="15%">用户名</th>
+                    <th width="15%">余额</th>
+                    <th width="15%">微信号</th>
+                    <th width="15%">QQ号</th>
+                    <th width="15%">手机号</th>
+                    <th width="15%">密码</th>
+                    <th width="30%">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox"></td>
+                    <td>用户名</td>
+                    <td>余额</td>
+                    <td>微信号</td>
+                    <td>QQ号</td>
+                    <td>手机号</td>
+                    <td>密码</td>
+                    <td>
+                        <button class="btn-edit btn btn-primary">编辑</button>
+                        <button class="btn-delete btn btn-primary">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">用户编辑
+                </h4>
+            </div>
+            <div class="modal-body">
+                <img src="" alt="" style="width:200px;height:200px;margin-bottom:8px;border-radius:50%;"/>
+                <div class="input-group m-name">
+                    <span class="input-group-addon">用户名:</span>
+                    <input id="" type="text" class="form-control inputNotEmpty" placeholder="" autocomplete="off">
+                </div>
+
+                <div class="input-group m-phone">
+                    <span class="input-group-addon">手机号:</span>
+                    <input id="" type="text" class="form-control inputNotEmpty" placeholder="" autocomplete="off" maxlength="11">
+                </div>
+
+
+                <div class="input-group m-coupon">
+                    <span class="input-group-addon">优惠券:</span>
+                    <input id="coupon" type="text" step="0.01" class="form-control onlyDecimal"  placeholder="" autocomplete="off">
+                </div>
+
+                <div class="input-group m-balance">
+                    <span class="input-group-addon">余额:</span>
+                    <input id="balance" type="text" step="0.01" class="form-control onlyDecimal" readonly placeholder="" autocomplete="off">
+                </div>
+
+                <div class="input-group m-pwd">
+                    <span class="input-group-addon">密码:</span>
+                    <input id="" type="text" class="form-control" placeholder="输入则重置" autocomplete="off">
+                </div>
+
+                <div class="input-group m-birth">
+                    <span class="input-group-addon">生日:</span>
+                    <input id="" type="text" class="form-control" placeholder="" autocomplete="off">
+                </div>
+
+                <input type="hidden" id="m-userId" value="" />
+                <button type="button" class="btn-save btn btn-primary">
+                    确定
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- /.modal-content -->
+</div>
+<!-- /.modal -->
+<link href="~/Scripts/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+<script src="~/Scripts/datetimepicker/bootstrap-datetimepicker.js"></script>
+

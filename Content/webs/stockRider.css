@@ -1,0 +1,16 @@
+﻿body {
+}
+.search1 ,.search2 {
+    width:100%;
+}
+#content-wapper {
+    
+}
+
+#areaInfo {
+    margin:8px;
+}
+    #areaInfo .input-group {
+        width:20vw;
+    }
+

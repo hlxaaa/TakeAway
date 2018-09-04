@@ -1,0 +1,39 @@
+﻿body {
+}
+#content-white {
+    /*height:600px;*/
+    padding:8px;
+}
+#mainInfo .input-group {
+    width:33%;
+}
+#riderInfo .input-group {
+width:33%;
+}
+#foodInfo .input-group {
+    width:24%;
+}
+#endInfo .input-group {
+    width:33%;
+}
+#payInfo .input-group {
+    width:33%;
+}
+.info-title {
+    margin-top:4px;
+    /*background-color:rgb(236,246,253);*/
+}
+#content-white .input-group {
+    margin-top:4px;
+    margin-bottom:4px;
+}
+
+.btn-delFood {
+    font-size:20px;
+    margin-top:8px;
+    margin-left:4px;
+}
+
+#div-edit {
+    text-align: center;
+}

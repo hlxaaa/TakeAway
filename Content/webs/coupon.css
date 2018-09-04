@@ -1,0 +1,37 @@
+﻿body {
+
+}
+
+.s-isUse, .isRepeat {
+    margin-bottom:8px;
+}
+
+.modal-content .input-group {
+    margin-bottom:8px;
+    /*display:inherit*/
+}
+
+.qrcode-hide {
+    display:none;
+}
+
+.qrcode-show {
+    display:block;
+}
+
+#selector .input-group {
+    margin:6px 0 6px 0;
+}
+.s-isUse span,.s-isRepeat span {
+        margin-right:4px;
+    }
+
+#modal2 .modal-content {
+    width:300px;
+   margin:20vw auto;
+   /*模态框水平居中，其他的居中也许也可以-txy*/
+}
+
+#qrcode {
+    /*margin:16px;*/
+}

@@ -1,0 +1,279 @@
+﻿@{
+    ViewBag.Title = "菜品详情";
+}
+<script type="text/javascript">
+    var foodId = '@ViewBag.foodId'
+    var isweek = '@ViewBag.isWeek'
+</script>
+<script src="~/Scripts/webs/foodDetail.js?201803121555"></script>
+<link href="~/Content/webs/foodDetail.css?201803121555" rel="stylesheet" />
+
+@{
+    var price = ViewBag.foodPrice ?? 0;
+    var deposit = ViewBag.deposit ?? 0;
+    var stars = ViewBag.stars ?? 5;
+
+}
+
+<div id="content-white">
+    <div>
+        <div id="foodNameIn">
+            <div class="input-group fl ">
+                <span class="input-group-addon">名称:</span>
+                <input id="foodName" class="form-control inputNotEmpty" value="@ViewBag.foodName" />
+            </div>
+            <div class="fr">
+                @{if (@ViewBag.foodid != null)
+                    {
+                        <button class="btn btn-danger btn-del">删除</button>
+                    }
+                }
+            </div>
+            <div class="fc"></div>
+        </div>
+    </div>
+    <div id="foodContent">
+        <div id="foodContentIn">
+
+            <div class="input-group">
+                <span class="input-group-addon">价格:</span>
+                <input id="foodPrice" type="text" class="form-control onlyDecimal inputNotEmpty" placeholder="" autocomplete="off" value="@price">
+            </div>
+            <div id="foodType">
+
+                <div class="input-group">
+                    <span class="input-group-addon">种类:</span>
+                    <select class="form-control">
+                        @{
+                            Dictionary<int, string> dict = ViewBag.dict;
+                            if (dict.Count == 0)
+                            {
+                                <option value="">无</option>
+                            }
+                            else
+                            {
+                                foreach (var d in dict)
+                                {
+                                    if (d.Key == ViewBag.foodTagId)
+                                    {
+                                        <option value="@d.Key" selected="selected">@d.Value</option>}
+                                    else
+                                    {
+                                        <option value="@d.Key">@d.Value</option>
+                                    }
+                                }
+                            }}
+                        }
+                    </select>
+                </div>
+
+                @*                <font>种类</font>
+                    <select>
+
+
+                    </select>*@
+            </div>
+            @{
+
+                bool isThisWeek = ViewBag.isThisWeek??false;
+                if (ViewBag.isWeek)
+                {
+
+
+                    <div id="">
+
+                        @*<div class="input-group">
+                                <span class="input-group-addon">二级标签:</span>
+                                <select class="form-control" id="secondTag">
+                                    <option value="1" selected="selected">周一</option>
+                                </select>
+                            </div>*@
+
+
+                        <div class="input-group">
+                            <span class="input-group-addon">二级标签:</span>
+
+                            <select class="form-control" id="isThisWeek">
+                                @{ if (isThisWeek)
+                                    {
+                                        <option value="1" selected="selected">本周</option>
+                                        <option value="0" >下周</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="1">本周</option>
+                                        <option value="0" selected="selected">下周</option>
+                                    }
+                                }
+
+                            </select>
+                            <select class="form-control" id="secondTag">
+                                @{
+                                    if (@ViewBag.secondTag == 1)
+                                    {
+                                        <option value="1" selected="selected">周一</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="1">周一</option>
+                                    }
+                                    if (@ViewBag.secondTag == 2)
+                                    {
+                                        <option value="2" selected="selected">周二</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="2">周二</option>
+                                    }
+
+                                    if (@ViewBag.secondTag == 3)
+                                    {
+                                        <option value="3" selected="selected">周三</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="3">周三</option>
+                                    }
+
+                                    if (@ViewBag.secondTag == 4)
+                                    {
+                                        <option value="4" selected="selected">周四</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="4">周四</option>
+                                    }
+
+                                    if (@ViewBag.secondTag == 5)
+                                    {
+                                        <option value="5" selected="selected">周五</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="5">周五</option>
+                                    }
+
+                                    if (@ViewBag.secondTag == 6)
+                                    {
+                                        <option value="6" selected="selected">周六</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="6">周六</option>
+                                    }
+
+                                    if (@ViewBag.secondTag == 0)
+                                    {
+                                        <option value="0" selected="selected">周日</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="0">周日</option>
+                                    }
+
+
+                                }
+                            </select>
+
+                        </div>
+                    </div>
+                }
+            }
+
+            <div id="">
+                <div class="input-group">
+                    <span class="input-group-addon">押金:</span>
+                    <input id="deposit" type="text" class="form-control inputNotEmpty onlyDecimal" value="@deposit" />
+                </div>
+            </div>
+
+            <div id="">
+                <div class="input-group">
+                    <span class="input-group-addon">星级:</span>
+                    <input id="stars" type="text" step="0.01" class="form-control inputNotEmpty onlyDecimal" value="@stars" />
+                </div>
+            </div>
+
+            <div id="isMain">
+
+                <div class="input-group">
+                    <span class="input-group-addon">属性:</span>
+                    <select class="form-control">
+                        @{ if (@ViewBag.isMain == null || @ViewBag.isMain)
+                            {
+                                <option value="1" selected="selected">主菜</option>
+                                <option value="0">配菜</option>
+                            }
+                            else
+                            {
+                                <option value="1">主菜</option>
+                                <option value="0" selected="selected">配菜</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div id="isCycle">
+
+                @*<div class="input-group">
+                        <span class="input-group-addon">能否回收:</span>
+                        <select class="form-control">
+                            @{ if (@ViewBag.isMain == null || @ViewBag.isCycle)
+                               {
+                                <option value="1" selected="selected">可回收</option>
+                                <option value="0">不可回收</option>
+                               }
+                               else
+                               {
+                                <option value="1">可回收</option>
+                                <option value="0" selected="selected">不可回收</option>
+                               }
+                            }
+                        </select>
+                    </div>*@
+
+            </div>
+
+
+        </div>
+        <div id="foodText">
+
+            <div class="form-group">
+                <label for="name">内容:</label>
+                <textarea class="form-control inputNotEmpty" rows="3">@ViewBag.foodText</textarea>
+
+            </div>
+
+            @*               <font>内容</font>
+                <textarea></textarea>*@
+
+        </div>
+        <div class="fc"></div>
+    </div>
+
+</div>
+
+<div id="divImgs">
+    @{
+        if (!ViewBag.isAdd)
+        {
+            <img class="img-show" src="@ViewBag.foodImg" alt="img">
+        }
+    }
+    <div id="btn-addImg">
+        <img src="~/Img/icon/icon-img.svg"></img><br>
+        选择图片
+    </div>
+    <form id="formid" method="post" enctype="multipart/form-data" action="/food/UpImg" style="visibility: hidden">
+        <input name="upImg" type="file" id="upImg" onchange="filechange(event)" accept=".png,.jpg,.jpeg">
+        <input id="testSubmit" type="submit" value="上传">
+    </form>
+    <div class="fc"></div>
+</div>
+
+<div id="edit">
+    <button class="btn btn-primary btn-save">保存</button>
+    <button class="btn btn-primary btn-back">返回</button>
+</div>
+

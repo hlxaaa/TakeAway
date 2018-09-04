@@ -1,0 +1,9 @@
+﻿body {
+}
+#content-white {
+    padding:8px;
+}
+    #content-white .input-group {
+        margin:4px;
+        width:60vw;
+    }

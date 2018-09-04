@@ -1,0 +1,55 @@
+﻿body {
+}
+#content-white {
+    /*margin-top:50px;*/
+}
+
+.sl-div font {
+    margin-top:10px;
+  /*line-height:10px;*/
+}
+#selector-left {
+    margin-right:8px;
+}
+
+.div-right3 {
+        height: 40px;
+    line-height: 45px;
+}
+
+#weekTag {
+    margin-top:8px;
+    width:20vw;
+}
+
+/*表格*/
+#main-table {
+    width:100%;
+}
+#main-table thead{
+    border-bottom:1px solid rgb(204,204,204);
+    line-height:50px;
+}
+    /*#main-table tbody {
+        line-height:30px;
+    }*/
+
+#selector {
+    margin:10px;
+    background-color:white;
+    /*height:80px;*/
+    border-radius:5px;
+    padding:8px;
+}
+.s-main ,.s-isOn,.s-deposit{
+    margin-top:10px;
+}
+
+
+
+
+
+
+/*.td-foodName {
+    width:8vw;
+}*/

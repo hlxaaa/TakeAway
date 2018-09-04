@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "区域骑手管理";
+}
+<script src="~/Scripts/webs/stockRider.js?201803121555"></script>
+<link href="~/Content/webs/stockRider.css?201803121555" rel="stylesheet" />
+<script>
+    var areaId='@ViewBag.areaId'
+</script>
+<div id="areaInfo">
+    <div class="input-group">
+        <span class="input-group-addon">区域名称:</span>
+        <select class="form-control" id="select-area">
+            @{Dictionary<int, string> dict = ViewBag.dict;
+
+                foreach (var item in dict)
+                {
+                    if (item.Key != ViewBag.areaId)
+                    {
+                        <option value="@item.Key">@item.Value</option>
+                    }
+                    else
+                    {
+                        <option value="@item.Key" selected="selected">@item.Value</option>
+                    }
+                }
+            }
+        </select>
+    </div>
+</div>
+<div id="content-wapper">
+    <div class="search2 fl">
+        <div id="div-search2" class="fl">
+            <div class="input-group">
+                <input type="text" class="form-control">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary btnSearch2" type="button">
+                        搜索
+                    </button>
+                </span>
+            </div>
+        </div>
+        <div class="div-right1 fr">
+            <button class="rider-add btn btn-primary">添加</button>
+        </div>
+        <div class="div-right2 fr">
+            <button class="rider-batchDel btn btn-primary">批量移除</button>
+        </div>
+        <div class="fc"></div>
+        <div id="content-white2">
+            <div id="table-wapper2">
+                <table id="main-table2">
+                    <thead><tr><th width="10%"><input type="checkbox"></th><th width="15%">骑手名称</th><th width="15%">操作</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>
+                                001
+                            </td>
+
+                            <td>
+                                <input class="foodId" type="hidden" value="">
+                                <button class="btn-edit btn btn-primary">编辑</button>
+                                <button class="btn-del btn btn-primary">删除</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="fc"></div>
+</div>
+
+<script>
+
+
+    $(function () {
+        $("[data-toggle='popover']").popover();
+    });
+</script>
+

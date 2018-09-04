@@ -1,0 +1,104 @@
+﻿body {
+}
+
+
+#btn-addImg {
+    width: 116px;
+    height: 102px;
+    border-radius: 7px;
+    background-color: rgb(64,64,64);
+    text-align: center;
+    float: left;
+    color: white;
+}
+
+    #btn-addImg img {
+        width: 64px;
+        margin-top: 8px;
+    }
+
+.img-show {
+    width: 116px;
+    height: 102px;
+    border-radius: 7px;
+    float: left;
+    margin-right: 16px;
+}
+
+#foodName {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#foodNameIn {
+    border-bottom: 1px solid rgb(204,204,204);
+    height: 50px;
+    line-height: 50px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+    #foodNameIn .input-group {
+        margin-top: 8px;
+    }
+/*#foodNameIn input {
+        height:20px;
+    }*/
+
+#foodContent {
+    width: 100%;
+    padding: 0 15px 0 15px;
+}
+
+    #foodContent .input-group, .form-group {
+        margin-top: 8px;
+    }
+
+#foodContentIn {
+    border-bottom: 1px solid rgb(204,204,204);
+    /*height: 220px;*/
+    padding-bottom:8px;
+}
+
+#foodPrice {
+    height: 30px;
+    line-height: 30px;
+}
+
+    #foodPrice input {
+        height: 20px;
+    }
+
+#foodType {
+    height: 50px;
+    line-height: 50px;
+}
+
+#foodText {
+    height: 50px;
+    /*line-height:50px;*/
+}
+
+#divImgs {
+    padding: 15px;
+    margin-top: 0px;
+}
+
+#edit {
+    text-align: center;
+}
+
+#content-white .input-group {
+    width: 200px;
+}
+
+#content-white {
+    /*height: 400px;*/
+    height:480px;
+    padding-bottom:8px;
+}
+
+#foodType select {
+    text-align:center;
+}

@@ -1,0 +1,201 @@
+﻿@{
+    ViewBag.Title = "骑手管理";
+}
+<link href="~/Content/webs/rider.css?201803121555" rel="stylesheet" />
+<script src="~/Scripts/webs/rider.js?201803121555"></script>
+<div id="div-search" class="fl">
+    <div class="input-group">
+        <input type="text" class="form-control">
+        <span class="input-group-btn">
+            <button class="btn btn-primary btnSearch" type="button">
+                搜索
+            </button>
+        </span>
+    </div>
+</div>
+<div class="div-right1 fr">
+    <button class="btn-add btn btn-primary">添加</button>
+</div>
+<div class="div-right2 fr">
+    <button class="btn-batchDel btn btn-primary">批量删除</button>
+</div>
+<div class="fc"></div>
+
+<div id="selector">
+    <div class="s-type">
+        <font>类型:</font>
+        <span id="span-all2" class="label label-info">全部
+                     <input type="hidden" value="3" />
+        </span>
+        <span id="span-dpc" class="label label-default">电瓶车
+                   <input type="hidden" value="0" />
+        </span>
+        <span id="span-qc" class="label label-default">汽车
+                   <input type="hidden" value="1" />
+        </span>
+        <span id="span-ztd" class="label label-default">自提点
+                        <input type="hidden" value="2" />
+        </span>
+    </div>
+
+    <div class="s-area">
+        <div class="input-group">
+            <span class="input-group-addon">区域:</span>
+            <select class="form-control">
+                @{Dictionary<int, string> areaDict = ViewBag.dictArea;
+                    <option value="0">全部</option>
+                    foreach (var item in areaDict)
+                    {
+                    <option value="@item.Key">@item.Value</option>
+                    }
+                }
+            </select>
+        </div>
+    </div>
+</div>
+
+
+<div id="content-white">
+    <div id="table-wapper">
+        <table id="main-table">
+            <thead>
+                <tr>
+                    <th width="10%">
+                        <input type="checkbox"></th>
+                    <th width="15%">账号</th>
+                    <th width="15%">密码</th>
+                    <th width="15%">车类</th>
+                    <th width="15%">状态</th>
+                    <th width="15%">所属区域</th>
+                    <th width="15%">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>账号
+                    </td>
+                    <td>密码
+                    </td>
+                    <td>车类
+                    </td>
+                    <td>状态
+                    </td>
+                    <td>区域id
+                    </td>
+                    <td>
+                        <button class="btn-edit btn btn-primary">编辑</button>
+                        <button class="btn-del btn btn-primary">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">骑手编辑
+                </h4>
+            </div>
+            <div class="modal-body">
+                @*                <div class="m-div m-account">
+                    <font>账号:</font>
+                    <input type="text">
+                    <div class="fc"></div>
+                </div>*@
+
+                <div class="input-group m-account">
+                    <span class="input-group-addon">账号:</span>
+                    <input id="" type="text" class="form-control">
+                </div>
+
+
+                @*                <div class="m-div m-pwd">
+                    <font>密码:</font>
+                    <input type="text">
+                        <div class="fc"></div>
+                </div>*@
+
+                <div class="input-group m-pwd">
+                    <span class="input-group-addon">密码:</span>
+                    <input id="" type="text" class="form-control">
+                </div>
+                <div class="input-group m-name">
+                    <span class="input-group-addon">姓名:</span>
+                    <input id="" type="text" class="form-control">
+                </div>
+                <div class="input-group m-sex">
+                    <span class="input-group-addon">性别:</span>
+                    <select class="form-control">
+                        <option value="0">女</option>
+                        <option value="1">男</option>
+                    </select>
+                </div>
+
+                <div class="input-group m-no">
+                    <span class="input-group-addon">编号:</span>
+                    <input id="" type="text" class="form-control">
+                </div>
+
+                <div class="input-group m-type">
+                    <span class="input-group-addon">车类:</span>
+                    <select class="form-control">
+                        <option value="0">电瓶车</option>
+                        <option value="1">汽车</option>
+                    </select>
+                </div>
+
+                <div class="input-group m-status">
+                    <span class="input-group-addon">状态:</span>
+                    <select class="form-control">
+                        <option value="0">下线</option>
+                        <option value="1">在线</option>
+                    </select>
+                </div>
+
+                <div class="input-group m-area">
+                    <span class="input-group-addon">区域:</span>
+                    <select class="form-control">
+                        @{Dictionary<int, string> dict = ViewBag.dictArea;
+                          foreach (var item in dict)
+                          {
+                            <option value="@item.Key">@item.Value</option>
+                          }
+                        }
+                    </select>
+                </div>
+
+                <div class="input-group m-stars">
+                    <span class="input-group-addon">星级:</span>
+                    <input id="" type="text" class="form-control">
+                </div>
+
+                <div class="input-group m-starCount">
+                    <span class="input-group-addon">评价次数:</span>
+                    <input id="" type="text" class="form-control">
+                </div>
+
+                <div class="input-group m-sendCount">
+                    <span class="input-group-addon">配送次数:</span>
+                    <input id="" type="text" class="form-control">
+                </div>
+
+                <div class="fc"></div>
+                <input type="hidden" id="m-riderId" value="" />
+                <button type="button" class="btn-save btn btn-primary">
+                    确定
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- /.modal-content -->
+</div>
+<!-- /.modal -->

@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "区域管理";
+}
+<script src="~/Scripts/webs/area.js?201803121555"></script>
+<link href="~/Content/webs/area.css?201803121555" rel="stylesheet" />
+
+@*<div class="test">
+    <button>1</button>
+</div>*@
+
+<div id="div-search" class="fl">
+    <div class="input-group">
+         <input type="text" class="form-control">
+        <span class="input-group-btn">
+            <button class="btn btn-primary btnSearch" type="button">
+                搜索
+            </button>
+            @*<img src="/Img/sider/test.svg" style="width:20px;">*@
+        </span>
+
+    </div>
+</div>
+<div class="div-right1 fr">
+    <button class="btn-add btn btn-primary">添加</button>
+</div>
+<div class="div-right2 fr">
+    <button class="btn-batchDel btn btn-primary">批量删除</button>
+</div>
+<div class="fc"></div>
+
+<div id="content-white">
+    <div id="table-wapper">
+        <table id="main-table">
+            <thead>
+                <tr>
+                    <th width="2%">
+                        <input type="checkbox"></th>
+                    <th width="15%">区域编号</th>
+                    <th width="15%">区域名称</th>
+                    <th width="30%">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox"></td>
+                    <td>编号</td>
+                       <td>名称</td>
+                    <td>
+                        <button class="btn-edit btn btn-primary">编辑</button>
+                        <button class="btn-delete btn btn-primary">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

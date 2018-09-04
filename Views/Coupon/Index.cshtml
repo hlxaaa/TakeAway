@@ -1,0 +1,143 @@
+﻿@{
+    ViewBag.Title = "优惠码管理";
+}
+<script src="~/Scripts/jquery.qrcode.min.js"></script>
+<script src="~/Scripts/webs/coupon.js?201803121555"></script>
+<link href="~/Content/webs/coupon.css?201803121555" rel="stylesheet" />
+
+<div id="div-search" class="fl">
+    <div class="input-group">
+        <input type="text" class="form-control">
+        <span class="input-group-btn">
+            <button class="btn btn-primary btnSearch" type="button">
+                搜索
+            </button>
+        </span>
+    </div>
+</div>
+<div class="div-right1 fr">
+    <button class="btn-add btn btn-primary">生成二维码</button>
+</div>
+<div class="div-right2 fr">
+    <button class="btn-batchDel btn btn-primary">批量作废</button>
+</div>
+<div class="div-right3 fr">
+    <button class="btn-download btn btn-success">下载二维码图片</button>
+</div>
+<div class="fc"></div>
+
+<div id="selector">
+
+    <div class="input-group">
+        <span class="input-group-addon">批次:</span>
+        <select class="form-control select-batch">
+            <option value="0">全部</option>
+            @{
+                foreach (var item in ViewBag.tss)
+                {
+                <option value="@item.Key">@item.Value</option>
+                }
+            }
+        </select>
+        <span class="input-group-btn">
+            <button class="btn btn-danger btn-delTs" type="button">
+                作废该批次
+            </button>
+        </span>
+    </div>
+    <div class="s-isUse">
+        <font>使用情况:</font>
+        <span id="span-all" class="label label-info">全部
+            <input type="hidden" value="2" /></span>
+        <span id="span-use" class="label label-default">已使用
+            <input type="hidden" value="1" /></span>
+        <span id="span-notUse" class="label label-default">未使用
+            <input type="hidden" value="0" /></span>
+    </div>
+        <div class="s-isRepeat">
+        <font>能否重复:</font>
+        <span id="span-all2" class="label label-info">全部
+            <input type="hidden" value="2" /></span>
+        <span id="span-repeat" class="label label-default">可重复
+            <input type="hidden" value="1" /></span>
+        <span id="span-notRepeat" class="label label-default">不可重复
+            <input type="hidden" value="0" /></span>
+    </div>
+</div>
+
+
+<div id="content-white">
+    <div id="table-wapper">
+        <table id="main-table">
+            <thead>
+                <tr>
+                    <th width="2%">
+                        <input type="checkbox"></th>
+                    <th width="15%">名称</th>
+                    <th width="30%">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox"></td>
+                    <td>用户名</td>
+                    <td>
+                        <button class="btn-edit btn btn-primary">编辑</button>
+                        <button class="btn-delete btn btn-primary">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+          @*<p>新增二维码</p>*@
+            </div>
+
+            <div class="modal-body">
+                      <div class="input-group">
+                    <span class="input-group-addon">是否允许重复:</span>
+                    <select class="form-control" id="isRepeat">
+                        <option value="0">不可重复</option>
+                        <option value="1">可重复</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">名称:</span>
+                    <input type="text" class="form-control inputNotEmpty"  value="" id="name"/>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">个数:</span>
+                    <input type="number" class="form-control inputNotEmpty onlyInt" step="1"  value="" id="amount" />
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">金额:</span>
+                    <input type="number" class="form-control inputNotEmpty onlyDecimal" step="0.01" value="" id="money" />
+                </div>
+                <button class="btn btn-primary btn-save">确定</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+ 
+            </div>
+
+          
+            <div id="qrcode" class=""></div>
+        </div>
+    </div>
+
+</div>

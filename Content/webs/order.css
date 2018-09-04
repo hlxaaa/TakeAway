@@ -1,0 +1,37 @@
+﻿body {
+}
+#selector {
+    margin:10px;
+    background-color:white;
+    /*height:80px;*/
+    border-radius:5px;
+    padding:8px;
+}
+    .s-status {
+        /*margin-top:8px;*/
+    }
+.s-status span,.s-isActual span {
+    margin-right:4px;
+    line-height:28px;
+}
+.td-address {
+    /*width:8vw;*/
+}
+
+.div-right2 {
+    display:none;
+}
+
+.td-div {
+width:80%;
+margin-left:10%;
+}
+
+td .form-control {
+    width:8vw;
+}
+
+.div-assign {
+    vertical-align:middle;
+}
+

@@ -1,0 +1,246 @@
+﻿* {
+margin:0;padding:0;
+font-family: "Microsoft YaHei";
+font-size:12px;
+}
+body {
+    
+    background-color:rgb(236,236,236);
+}
+.btn-notOn {
+    background-color:gray!important;
+}
+.th-div {
+    cursor:pointer;
+    /*display:;*/
+}
+
+#header {
+    line-height:60px;
+    height:60px;
+    background-color:rgb(64,64,64);
+}
+.header-left {
+    line-height:60px;
+    font-size:24px;
+    margin-left:20px;
+}
+.main-wrapper {
+    height:1000px;
+}
+#sider {
+    width:170px;
+    height:100%;
+    background-color:white;
+
+}
+.menu {
+    /*margin-top:10px;*/
+}
+    .menu li {
+    height:42px;
+    padding-left:30px;
+    line-height:42px;
+    }
+        .menu li a {
+            text-decoration:none;
+            color:black;
+            font-size:14px;
+            line-height:14px;
+            /*font-size:12px;*/
+        }
+    .menu li a:hover {
+        color:#108ee9;
+    }
+        .menu li img {
+            width:16px;
+            margin-right:10px;
+            margin-top:-3px;
+        }
+
+#content {
+    width:calc(100% - 180px);
+    min-height:600px;
+}
+
+/*表格*/
+#main-table,#main-table2 {
+    width:100%;
+}
+#main-table thead,#main-table2 thead{
+    border-bottom:1px solid rgb(204,204,204);
+    line-height:50px;
+}
+
+    #table-wapper,#table-wapper2{
+        padding-left:16px;
+            padding-right:16px;
+    }
+
+#main-table,#main-table2 {
+    text-align:center;
+}
+    #main-table thead tr th ,#main-table2 thead tr th{
+        text-align:center;
+    }
+
+td {
+    padding:0 2px 0 2px;
+}
+
+
+
+.li-active {
+   background-color:rgb(236,246,253)
+}
+   .menu .li-active div a {
+     color:#108ee9;
+    }
+.li-active .li-div-active {
+    display:block;
+    height:100%;
+    width:4px;
+    background-color:rgb(16,142,233);
+}
+
+#content-white,#content-white2 {
+   margin:10px;
+   border-radius:5px;
+    background-color:white;
+    height:100%;
+}
+
+/*超出长度文字隐藏*/
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+
+/*统一的*/
+
+#selector {
+    margin:10px;
+    background-color:white;
+    /*height:80px;*/
+    min-height:64px;
+    border-radius:5px;
+    padding:8px;
+}
+
+#table-wapper table {
+    table-layout:fixed;
+}
+/*让表格的th，td宽度固定，之后要加width -txy备忘*/
+
+
+nav li {
+    cursor:pointer;
+}
+
+span:hover {
+    cursor:pointer;
+}
+
+.td-div {
+    width:80%;
+    margin-left:10%;
+}
+
+#div-search,#div-search2 {
+    margin-top:8px;
+}
+
+#div-search .input-group,#div-search2 .input-group {
+    width:20vw;
+}
+#div-search .input-group input ,#div-search .input-group span,#div-search2 .input-group input ,#div-search2 .input-group span{
+   line-height:45;
+}
+
+
+.btn-hide {
+    display:none;
+}
+
+tbody button {
+    margin-right:8px;
+}
+    tbody button:last-child {
+        margin-right:0;
+    }
+
+input {
+    text-align:center;
+}
+select option{
+    text-align:center;
+}
+
+/*tbody .btn-edit {
+    margin-right:8px;
+}
+tbody .btn-edit2 {
+    margin-right:8px;
+}*/
+
+#main-table tbody tr:hover,#main-table2 tbody tr:hover {
+    background-color:rgb(236,246,253);
+}
+
+.modal-content {
+    padding:0 16px 0 16px;
+}
+
+/*.btn-batchDel, .btn-add {
+    margin-right:16px;
+}*/
+.div-right1 button ,.div-right2 button,.div-right3 button{
+    margin-right:16px;
+}
+
+#div-search,#div-search2 {
+    margin-left:10px;
+    height:40px;
+    line-height:40px;
+}
+
+/*#div-search input,#div-search2 input{
+    height:20px;
+}*/
+
+.div-right1, .div-right2 , .div-right3{
+    height:40px;
+    line-height:45px;
+}
+
+    #main-table tbody ,#main-table2 tbody {
+        line-height:40px;
+    }
+
+.fl {
+    float:left;
+}
+.fr {
+float:right;
+}
+.fc {
+    clear:both;
+}
+.white {
+    color:white;
+}
+.btn-primary {
+    background-color:rgb(16,142,233);
+    border-color:rgb(16,142,233);
+}
+
+#sider li {
+    list-style:none;
+}
+
+.icon-exit {
+    width:36px;
+    margin-right:16px;
+    cursor:pointer;
+}

@@ -1,0 +1,130 @@
+﻿@{
+    ViewBag.Title = "文章管理";
+}
+
+<link href="~/Scripts/dist/css/wangEditor.min.css" rel="stylesheet" />
+<div id="div-search" class="fl">
+    <div class="input-group">
+        <input type="text" class="form-control">
+        <span class="input-group-btn">
+            <button class="btn btn-primary btnSearch" type="button">
+                搜索
+            </button>
+        </span>
+    </div>
+</div>
+<div class="div-right1 fr">
+    <button class="btn-add btn btn-primary">添加</button>
+</div>
+<div class="div-right2 fr">
+    <button class="btn-batchDel btn btn-primary">批量删除</button>
+</div>
+<div class="fc"></div>
+
+<div id="selector">
+     <div id="selector-left" class="fl">
+         <div><font class="fr">文章类型:</font></div>
+            <div class="sl-div"><font class="fr">状态:</font></div>
+         <div class="fc"></div>
+         </div>
+
+    <div id="selector-right" class="fl">
+    <div class="s-type">
+        <span id="span-all" class="label label-info">全部
+            <input type="hidden" value="2" />
+        </span>
+            <span id="span-article" class="label label-default">文章
+            <input type="hidden" value="1" />
+        </span>
+            <span id="span-notArticle" class="label label-default">公告
+            <input type="hidden" value="0" />
+        </span>
+    </div>
+    <div class="s-status">
+        <span id="span-all2" class="label label-info">全部
+            <input type="hidden" value="2" />
+        </span>
+            <span id="span-up" class="label label-default">已发布
+            <input type="hidden" value="1" />
+        </span>
+            <span id="span-down" class="label label-default">未发布
+            <input type="hidden" value="0" />
+        </span>
+    </div>
+        </div>
+        <div class="fc"></div>
+</div>
+
+<div id="content-white">
+    <div id="table-wapper">
+        <table id="main-table">
+            <thead>
+                <tr>
+                    <th width="2%">
+                        <input type="checkbox"></th>
+                    <th width="15%">标题</th>
+                     <th width="15%">文章/公告</th>
+                     <th width="15%">大致内容</th>
+                    <th width="30%">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox"></td>
+                    <td>标题</td>
+                      <td>文章啊</td>
+                      <td>内容啊</td>
+                    <td>
+                        <button class="btn-edit btn btn-primary">编辑</button>
+                        <button class="btn-delete btn btn-primary">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+            <div class="m-div input-group">
+                <span class="input-group-addon">标题:</span>
+                <input type="text" class="form-control inputNotEmpty" value="" id="m-title"/>
+                @*<font class="inputTips">还剩18字可以输入</font>*@
+            </div>
+            <div class="m-div input-group div-type">
+                <span class="input-group-addon">类型:</span>
+                <select id="m-select" class="form-control">
+                    <option value="1">文章</option>
+                    <option value="0">公告</option>
+                </select>
+            </div>
+              <div class="m-div input-group div-type">
+                <span class="input-group-addon">状态:</span>
+                <select id="select-status" class="form-control">
+                    <option value="1">已发布</option>
+                    <option value="0">未发布</option>
+                </select>
+            </div>
+
+            <div class="modal-body">
+                  <div class="row" id="divEditor" style="height: 600px"></div>
+                <input type="hidden" id="m-articleId" value="" />
+                <button type="button" class="btn-save btn btn-primary">
+                    确定
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- /.modal-content -->
+</div>
+<!-- /.modal -->
+
+<script src="~/Scripts/dist/js/wangEditor.min.js"></script>
+<link href="~/Content/webs/article.css?201803121555" rel="stylesheet" />
+<script src="~/Scripts/webs/article.js?201803121555"></script>

@@ -1,0 +1,18 @@
+﻿body {
+}
+#table-wapper {
+
+}
+
+#content_header .input-group {
+    width:20vw;
+    margin:8px;
+}
+
+.search1 ,.search2 {
+    /*width:50%;*/
+}
+
+#div-search2 {
+    width:50%;
+}

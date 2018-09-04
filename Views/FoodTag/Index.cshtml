@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "标签管理";
+}
+
+
+@Scripts.Render("~/Scripts/webs/foodtag.js?201803121555")
+<link href="~/Content/webs/foodTag.css?201803121555" rel="stylesheet" />
+
+
+
+
+
+<div id="div-search" class="fl">
+    <div class="input-group">
+        <input type="text" class="form-control">
+        <span class="input-group-btn">
+            <button class="btn btn-primary btnSearch" type="button">
+                搜索
+            </button>
+        </span>
+    </div>
+</div>
+<div class="div-right1 fr">
+    <button class="btn-add btn btn-primary">添加</button>
+</div>
+<div class="div-right2 fr">
+    <button class="btn-batchDel btn btn-primary">批量删除</button>
+</div>
+<div class="fc"></div>
+
+<div id="selector">
+    <div class="s-tagType">
+        <font>周/普通标签:</font>
+        <span id="span-all" class="label label-info">全部</span>
+        <span id="span-main" class="label label-default">周标签</span>
+        <span id="span-notMain" class="label label-default">普通标签</span>
+    </div>
+</div>
+
+
+<div id="content-white">
+    <div id="table-wapper">
+        <table id="main-table">
+            <thead>
+                <tr>
+                    <th width="2%">
+                        <input type="checkbox">
+                    </th>
+                    <th width="15%">名称</th>
+                    <th width="30%">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>用户名</td>
+                    <td>
+                        <button class="btn-edit btn btn-primary">编辑</button>
+                        <button class="btn-delete btn btn-primary">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    菜品种类编辑
+                </h4>
+            </div>
+            <div class="input-group fl ">
+                <span class="input-group-addon">名称:</span>
+                <input id="tagName" class="form-control inputNotEmpty">
+            </div>
+            <div class="input-group fl ">
+                <span class="input-group-addon">标签类型:</span>
+                <select id="isWeek" class="form-control">
+                    <option value="1">周标签</option>
+                    <option value="0">普通标签</option>
+                </select>
+            </div>
+
+            @*<input type="text" value="" id="m-typeName" />*@
+            <input type="hidden" id="m-typeId" value="" />
+            <button type="button" class="btn-save btn btn-primary">
+                确定
+            </button>
+        </div>
+    </div>
+</div>
+
+

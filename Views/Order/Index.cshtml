@@ -1,0 +1,114 @@
+﻿@{
+    ViewBag.Title = "订单管理";
+}
+<link href="~/Content/webs/order.css?201803121555" rel="stylesheet" />
+<script src="~/Scripts/webs/order.js?201803121555"></script>
+<div>
+    <div id="div-search" class="fl">
+        <div class="input-group">
+            <input type="text" class="form-control">
+            <span class="input-group-btn">
+                <button class="btn btn-primary btnSearch" type="button">
+                    搜索
+                </button>
+            </span>
+        </div>
+    </div>
+    <div class="div-right1 fr">
+        <button class="btn-add btn btn-primary">添加</button>
+    </div>
+    <div class="div-right2 fr">
+        <button class="btn-batchDel btn btn-primary">批量删除</button>
+    </div>
+    <div class="fc"></div>
+</div>
+<div id="selector">
+    <div class="s-isActual">
+        <font>订单类型:</font>
+        <span id="span-actualAll" class="label label-info">全部
+            <input type="hidden" value="2" />
+        </span>
+        <span id="span-actual" class="label label-default">实时
+            <input type="hidden" value="1" />
+        </span>
+        <span id="span-notActual" class="label label-default">预定
+            <input type="hidden" value="0" />
+        </span>
+    </div>
+    <div class="s-status">
+        <font>订单状态:</font>
+        <span id="span-all" class="label label-info">全部
+            <input type="hidden" value="100" />
+        </span>
+        <span id="span-notPay" class="label label-default">未支付
+            <input type="hidden" value="0" />
+        </span>
+        <span id="span-wati" class="label label-default">待接单
+            <input type="hidden" value="1" />
+        </span>
+        <span id="span-sending" class="label label-default">配送中<input type="hidden" value="2" />
+        </span>
+        <span id="span-sended" class="label label-default">已送达
+            <input type="hidden" value="3" />
+        </span>
+        <span id="span-cancelled" class="label label-default">取消的
+            <input type="hidden" value="5" />
+        </span>
+          <span id="span-commented" class="label label-default">已评价
+            <input type="hidden" value="7" />
+        </span>
+           <span id="span-waitCycle" class="label label-default">待回收
+            <input type="hidden" value="8" />
+        </span>
+         <span id="span-cycling" class="label label-default">回收中
+            <input type="hidden" value="9" />
+        </span>
+        <span id="span-cancelling" class="label label-default">骑手申请取消
+            <input type="hidden" value="99" />
+        </span>
+
+    </div>
+    <div class="fc"></div>
+</div>
+<div id="content-white">
+    <div id="table-wapper">
+        <table id="main-table">
+            <thead>
+                <tr>
+                    <th width="10%">
+                        <input type="checkbox"></th>
+                    <th width="8%">用户名称</th>
+                    <th width="8%">菜单</th>
+                    <th width="8%">区域</th>
+                    <th width="8%">送达时间</th>
+                    <th width="8%">备注</th>
+                    <th width="8%">订单状态</th>
+                    <th width="20%">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>用户名称
+                    </td>
+                    <td>菜单
+                    </td>
+                    <td>区域
+                    </td>
+                    <td>送达时间
+                    </td>
+                    <td>备注
+                    </td>
+                    <td>订单状态
+                    </td>
+                    <td>
+                        <button class="btn btn-primary">编辑</button>
+                        <button class="btn btn-primary">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

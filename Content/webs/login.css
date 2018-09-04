@@ -1,0 +1,76 @@
+﻿body {
+    margin:0;
+    padding:0;
+    /*background:url("/Images/base/img-background.jpg")*/
+}
+
+
+
+#loginPanel {
+    background-color:white;
+    border-radius:5px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:390px;
+    height:330px;
+    margin-left:-220px;
+    margin-top:-208px;
+    padding-left:30px;
+    z-index:31
+}
+
+#loginPanel input {
+    text-align:left;
+    height:42px;
+    border-radius:5px;
+    border:1px solid rgb(204,204,204);
+    padding-left:12px;
+}
+
+.panel-title, .panel-account, .panel-password, .panel-vcode, .panel-login {
+    margin-top:30px;
+}
+
+.panel-login {
+    text-align:center;
+}
+.panel-account input, .panel-password input{
+    
+    width:347px;
+    
+}
+
+    .panel-vcode input {
+        width:227px;
+    }
+
+.img-vcode {
+    height:40px;
+    width:104px;
+    margin-top:-3px;
+}
+
+.btn-login {
+    display:block;
+    background-color: #3984e8;
+    border-color: #3984e8;
+    color: white;
+    width:347px;
+    height:40px;
+    line-height:40px;
+    margin-left:0;
+    border-radius:5px;
+    text-align:center;
+    text-decoration:none;
+    padding:0 6px 0 6px;
+}
+
+    .btn-login:hover {
+        text-decoration:none;
+        cursor:pointer;
+    }
+
+.panel-title {
+    font-size:24px;
+}

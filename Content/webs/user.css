@@ -1,0 +1,42 @@
+﻿body {
+}
+
+
+#timeArea {
+    width:480px;
+    margin-top:16px;
+    display:none;
+}
+
+#selector {
+    min-height:40px;
+}
+
+/*模态框*/
+.modal-content {
+    width:300px;
+    height:650px;
+}
+
+.modal-body .input-group {
+    margin-bottom:8px;
+}
+/*.m-div input {
+    float:right;
+}
+.m-div font {
+    float:left;
+}*/
+
+
+/*表格*/
+#main-table {
+    width:100%;
+}
+#main-table thead{
+    border-bottom:1px solid rgb(204,204,204);
+    line-height:50px;
+}
+.td-pwd {
+    width:8vw;
+}

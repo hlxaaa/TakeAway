@@ -1,0 +1,32 @@
+﻿body {
+}
+.m-div {
+    margin-top:8px;
+    margin-left:16px;
+}
+
+.sl-div font {
+    margin-top:10px;
+}
+#selector-left {
+    margin-right:8px;
+}
+.s-status {
+margin-top:10px;
+width:500px;
+}
+
+/*#span-down {
+    padding-right:0.6em;
+}*/
+
+.s-type span,.s-status span {
+    margin-right:4px;
+    /*line-height:28px;*/
+}
+.div-type {
+    margin-right:16px;
+}
+.s-status {
+    /*margin-top:8px;*/
+}

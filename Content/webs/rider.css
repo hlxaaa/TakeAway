@@ -1,0 +1,19 @@
+﻿body {
+}
+.modal-body {
+    height:600px;
+}
+    .modal-body .input-group {
+        margin-bottom:8px;
+    }
+/*.td-pwd {
+    width:8vw;
+}*/
+
+.s-area {
+margin-top:12px;
+width:20vw;
+}
+.s-type span {
+    margin-right:4px;
+}

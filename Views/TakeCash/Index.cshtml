@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "提现";
+}
+<script src="~/Scripts/webs/takeCash.js?201803121555"></script>
+<link href="~/Content/webs/takeCash.css?201803121555" rel="stylesheet" />
+
+
+<div id="div-search" class="fl">
+    <div class="input-group">
+        <input type="text" class="form-control">
+        <span class="input-group-btn">
+            <button class="btn btn-primary btnSearch" type="button">
+                搜索
+            </button>
+        </span>
+    </div>
+</div>
+@*<div class="div-right1 fr">
+    <button class="btn-add btn btn-primary">添加</button>
+</div>
+<div class="div-right2 fr">
+    <button class="btn-batchDel btn btn-primary">批量删除</button>
+</div>*@
+<div class="fc"></div>
+
+<div id="content-white">
+    <div id="table-wapper">
+        <table id="main-table">
+            <thead>
+                <tr>
+                    <th width="10%">
+                        <input type="checkbox"></th>
+                    <th width="15%">用户id</th>
+                    <th width="15%">用户姓名</th>
+                    <th width="15%">联系方式</th>
+                    <th width="15%">提现方式</th>
+                    <th width="15%">提现账号</th>
+                    <th width="15%">申请时间</th>
+                      <th width="15%">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>黄焖鸡
+                    </td>
+                    <td>100
+                    </td>
+                    <td>西餐
+                    </td>
+                    <td>图片啊
+                    </td>
+                    <td>真的内容
+                    </td>
+                     <td>真的内容
+                    </td>
+                    <td>
+                        <input class="foodId" type="hidden" value="">
+                        <button class="btn-doTake btn btn-primary">确认</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

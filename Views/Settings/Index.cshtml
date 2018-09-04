@@ -1,0 +1,107 @@
+﻿@{
+    ViewBag.Title = "系统设置";
+}
+<script src="~/Scripts/webs/settings.js?201803121555"></script>
+<link href="~/Content/webs/settings.css?201803121555" rel="stylesheet" />
+@{
+    takeAwayWebApi.Models.Response.SettingRes settings = ViewBag.settings;
+}
+<script>
+    var thisLv = '@ViewBag.pfLevel'
+</script>
+<div>
+    <div class="div-right1 fr">
+        <button class="btn-add btn btn-primary">添加账号</button>
+    </div>
+    <div class="fc"></div>
+</div>
+<div id="selector">
+    <div class="s-tab">
+        <span id="span-tips" class="label label-info">基本设置<input type="hidden" value="0" /></span>
+        <span id="span-platform" class="label label-default">平台账号<input type="hidden" value="1" /></span>
+    </div>
+</div>
+
+<div id="content-white">
+    <div class="input-group">
+        <span class="input-group-addon">二维码有效时间(天):</span>
+        <input type="text" class="form-control" id="couponSaveDays" value="@settings.couponSaveDays">
+        @*  <span class="input-group-btn">
+            <button class="btn btn-primary btn-update1" type="button">
+                更新
+            </button>
+        </span>*@
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon">骑手取消提示词:</span>
+        <input type="text" class="form-control" id="riderCancelTips" value="@settings.riderCancelTips">
+        @*    <span class="input-group-btn">
+            <button class="btn btn-primary btn-updateRiderCancelTips" type="button">
+                更新
+            </button>
+        </span>*@
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon">提醒骑手回收餐盒提示词:</span>
+        <input type="text" class="form-control" id="recoveryBoxTips" value="@settings.recoveryBoxTips">
+        @*      <span class="input-group-btn">
+            <button class="btn btn-primary btn-updateRecoveryBoxTips" type="button">
+                更新
+            </button>
+        </span>*@
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon">订单配送中提示词:</span>
+        <input type="text" class="form-control" id="orderSendingTips" value="@settings.orderSendingTips">
+        @*   <span class="input-group-btn">
+            <button class="btn btn-primary btn-updateOrderSendingTips" type="button">
+                更新
+            </button>
+        </span>*@
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon">订单送达提示词:</span>
+        <input type="text" class="form-control" id="orderArrivelTips" value="@settings.orderArrivelTips">
+        @*    <span class="input-group-btn">
+            <button class="btn btn-primary btn-updateOrderArrivelTips" type="button">
+                更新
+            </button>
+        </span>*@
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon">餐盒已回收提示词:</span>
+        <input type="text" class="form-control" id="boxGetTips" value="@settings.boxGetTips">
+        @*       <span class="input-group-btn">
+            <button class="btn btn-primary btn-updateBoxGetTips" type="button">
+                更新
+            </button>
+        </span>*@
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-addon">后台指派订单给骑手提示词:</span>
+        <input type="text" class="form-control" id="serverAssignRiderTips" value="@settings.serverAssignRiderTips">
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-addon">自提点实时订单提示词:</span>
+        <input type="text" class="form-control" id="shopNewOrderTips" value="@settings.shopNewOrderTips">
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-addon">自提点预订订单提示词:</span>
+        <input type="text" class="form-control" id="shopNewReserveOrderTips" value="@settings.shopNewReserveOrderTips">
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-addon">优惠券抵扣百分比:</span>
+        <input type="text" class="form-control" id="discount" value="@settings.discount">
+    </div>
+
+    <div class="fc"></div>
+    <div>
+        <button class="btn btn-primary btn-updateAll" type="button">
+            更新
+        </button>
+    </div>
+</div>
